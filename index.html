@@ -1,6 +1,6 @@
 ---
 layout: one_page
-title: Bestie nutrition
+title: "Bestie nutrition"
 custom_css: orange
 custom_font: font2
 hero_area:
@@ -57,7 +57,7 @@ call_to_action:
 ---
 
 <div class="content-wrapper">
-{% include header.html extra_class="absolute transparent" logo_class="logo" container_class="container" %}
+{% include header.html extra_class="absolute transparent" logo_class="logo" container_class="container"  %}
 
 
 <div class="wrapper bg-opacity-default">
@@ -68,7 +68,7 @@ call_to_action:
                 <div class="col-md-9">
                     <div class="space90"></div>
                     <h1 class="display-1">
-                        {{page.hero_area.title}}
+                        {{page.hero_area.title}} {{relative_url}}
                         <span class="typer color-default" id="typer" data-delay="100" data-delim=":" data-words="{% for text in page.hero_area.animated_text %} {{text | append: ':'}} {% endfor %}"> </span>
                         <span class="cursor color-default" data-owner="typer"></span>
                     </h1>
@@ -228,11 +228,11 @@ call_to_action:
   </div>
 
 
-  <div class="wrapper bg-opacity-default">
+  <div class="wrapper bg-opacity-default"> 
     <div class="container inner pb-0">
       <div class="row align-items-center">
       <div class="col-md-5 col-lg-4 offset-lg-1 d-none d-md-flex">
-        <figure><img src="/assets/images/art/woman.png" alt="/assets/images/art/woman.png"></figure>
+        <figure><img src="./assets/images/art/woman.png" alt="/assets/images/art/woman.png"></figure>
       </div>
     <div class="col-md-7 col-lg-6 pl-60 pl-md-15">
       <h3 class="page-title">Meet Katie</h2>
