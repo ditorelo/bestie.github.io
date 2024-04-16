@@ -1,4 +1,4 @@
-asdfasdfasddfs<nav
+<nav
   class="navbar {% if include.extra_class %} {{include.extra_class}} {% endif %} navbar-hover-opacity navbar-expand-lg">
   <div
     class="{% if include.container_class %} {{include.container_class}} {% else %} container-fluid {% endif %} flex-row justify-content-center">
@@ -26,6 +26,7 @@ asdfasdfasddfs<nav
         {% if page.header_style == 'three' %}
           {% include cart_header_section.html %}
         {% endif %}
+        {% if false %}
         <li class="dropdown search-dropdown position-static nav-item">
           <a href="#" role="button" class="collapse-toggle" data-toggle="collapse" data-target=".search-dropdown-menu"
             aria-haspopup="true" aria-expanded="false"><i class="jam jam-search"></i></a>
@@ -43,6 +44,7 @@ asdfasdfasddfs<nav
         </li>
         <li class="nav-item"><button class="plain" data-toggle="offcanvas-info"><i class="jam jam-info"></i></button>
         </li>
+        {% endif %}
       </ul>
       <!-- /.navbar-nav -->
     </div>
@@ -101,6 +103,7 @@ asdfasdfasddfs<nav
         </li>
         {% else %}
         <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="{{menu.url}}">{{menu.text}}</a>
+          {% if menu.has_submenu != false %}
           <ul class="dropdown-menu">
             {% if menu.label_two %}
             {% for label_two in menu.label_two %}
@@ -119,6 +122,7 @@ asdfasdfasddfs<nav
             {% endfor %}
             {% endif %}
           </ul>
+          {% endif %}
         </li>
         {% endcase %}
         {% endfor %}

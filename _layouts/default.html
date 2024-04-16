@@ -27,6 +27,39 @@
   {% if site.data.general_settings.google_analytics.enable %}
    {% include analytics.html %}
   {% endif %}
+  
+  <style type="text-css">
+  .tick-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding-left: 1rem;
+      text-indent: -0.7rem;
+    }
+
+    li::before {
+    content: "🐻 ";
+    }
+  }
+
+  .cross-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding-left: 1rem;
+      text-indent: -0.7rem;
+    }
+
+    li::before {
+    content: "🐻 ";
+    }
+  }
+
+  </style>
 </head>
 <body {% if page.overflow %} class="overflow-hidden" {% endif %}>
   <div class="content-wrapper">
