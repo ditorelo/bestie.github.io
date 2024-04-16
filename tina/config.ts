@@ -31,7 +31,7 @@ export default defineConfig({
       {
         name: "post",
         label: "Posts",
-        path: "content/posts",
+        path: "_posts",
         fields: [
           {
             type: "string",
@@ -40,6 +40,48 @@ export default defineConfig({
             isTitle: true,
             required: true,
           },
+          {
+            type: "datetime",
+            name: "date",
+            label: "date",
+            required: true,
+          },     
+          {
+            type: "string",
+            name: "tags",
+            label: "Tags",
+            required: true,
+          },          
+          {
+            type: "string",
+            name: "author",
+            label: "Author",
+            required: true,
+          },               
+          {
+            type: "string",
+            name: "categories",
+            label: "Categories",
+            required: true,
+            list: true
+          },   
+          {
+            type: "image",
+            name: "post_image",
+            label: "Image",
+            required: true,
+          },                  
+          {
+            type: "image",
+            name: "gallery",
+            label: "Image Gallery",
+            list: true            
+          },    
+          {
+            type: "boolean",
+            name: "trending",
+            label: "Trending?",     
+          },                                           
           {
             type: "rich-text",
             name: "body",
